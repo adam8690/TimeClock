@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace StatePattern
+namespace TimeClock
 {
     class BoostState : IBoilerState
     {

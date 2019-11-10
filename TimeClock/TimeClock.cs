@@ -1,15 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
 
-namespace StatePattern
+namespace TimeClock
 {
     class TimeClock
     {
         private IBoilerState State;
-        private List<DateTime> Schedule;
+        private Schedule Schedule;
         private TimeSpan BoostDuration;
 
-        public TimeClock(List<DateTime> schedule, TimeSpan boostDuration)
+        public TimeClock(Schedule schedule, TimeSpan boostDuration)
         {
             Schedule = schedule;
             BoostDuration = boostDuration;

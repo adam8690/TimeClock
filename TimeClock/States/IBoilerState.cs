@@ -1,4 +1,4 @@
-﻿namespace StatePattern
+﻿namespace TimeClock
 {
     interface IBoilerState
     {
