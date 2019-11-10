@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.29424.173
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TimeClock", "TimeClock\TimeClock.csproj", "{94889AC3-7D38-4185-8E03-701CC1144556}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScheduleApi", "ScheduleApi\ScheduleApi.csproj", "{7C425404-C213-4A12-81A4-03D10C65D317}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScheduleApi", "ScheduleApi\ScheduleApi.csproj", "{7C425404-C213-4A12-81A4-03D10C65D317}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScheduleInterface", "ScheduleInterface\ScheduleInterface.csproj", "{8A8843D4-4B7B-4FE6-9357-ED26F530F99D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{7C425404-C213-4A12-81A4-03D10C65D317}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C425404-C213-4A12-81A4-03D10C65D317}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C425404-C213-4A12-81A4-03D10C65D317}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A8843D4-4B7B-4FE6-9357-ED26F530F99D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A8843D4-4B7B-4FE6-9357-ED26F530F99D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A8843D4-4B7B-4FE6-9357-ED26F530F99D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A8843D4-4B7B-4FE6-9357-ED26F530F99D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
