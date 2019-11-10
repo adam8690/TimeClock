@@ -1,17 +1,38 @@
 ﻿using System;
+using System.Threading;
+using System.Timers;
 
 namespace TimeClock
 {
-    class BoostState : IBoilerState
+    class BoostState : ITimeClockState
     {
-        public void CheckTime(TimeClock context)
+        private bool BoostIsOn;
+        public void SetHeatingMode(TimeClock context)
         {
-            Console.WriteLine(nameof(Offstate));
-            // Check if boost has been cancelled
-            // Check if boos duration has elapsed
+            Console.WriteLine(nameof(BoostState));
+            BoostIsOn = true;
+            var boostDurationTimeSpan = new TimeSpan(0, context.Schedule.BoostDurationMinutes, 0);
+            var boostTimer = new System.Timers.Timer(boostDurationTimeSpan.TotalMilliseconds);
+            boostTimer.Enabled = true;
+            boostTimer.Elapsed += OnBoostTimerElapsed;
 
-            // Go back to either OnState or OffState depending on current time. 
+            boostTimer.Start();
+
+            while (BoostIsOn)
+            {
+                Console.WriteLine("Checking if Boost is On (Should be every second)");
+                Thread.Sleep(1000);
+                break;
+            }
+
+            // Set GPIO Pins here
+
             context.SetStateFromSchedule();
+        }
+
+        private void OnBoostTimerElapsed(Object source, ElapsedEventArgs e)
+        {
+            BoostIsOn = false;
         }
     }
 }
