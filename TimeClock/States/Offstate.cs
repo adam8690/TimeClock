@@ -2,9 +2,9 @@
 
 namespace TimeClock
 {
-    class Offstate : IBoilerState
+    class Offstate : ITimeClockState
     {
-        public void CheckTime(TimeClock context)
+        public void SetHeatingMode(TimeClock context)
         {
             Console.WriteLine(nameof(Offstate));
             

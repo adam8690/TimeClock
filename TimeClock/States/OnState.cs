@@ -1,18 +1,16 @@
 ﻿using System;
+using System.Threading;
 
 namespace TimeClock
 {
-    class OnState : IBoilerState
+    class OnState : ITimeClockState
     {
-        public void CheckTime(TimeClock context)
+        public void SetHeatingMode(TimeClock context)
         {
             Console.WriteLine(nameof(OnState));
-            // loop here
 
-            // Check for boost mode. Cancellation token? 
-            // context.SetState(Boost);
 
-            // check for if it is time for boiler to switch off
+
             context.SetState(new Offstate());
         }
     }

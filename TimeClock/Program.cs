@@ -7,10 +7,9 @@ namespace TimeClock
     {
         static void Main(string[] args)
         {
-            var schedule = new List<DateTime>();
-            var boostDuration = new TimeSpan();
-            var boiler = new TimeClock(schedule, boostDuration);
-            boiler.CheckTime();
+            var schedule = new Schedule();
+            var timeClock = new TimeClock(schedule);
+            timeClock.Start();
         }
     }
 }
